@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template-web.js"></script>
+    <link rel="stylesheet" href="../bootstrat/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('../fonts/icomoon.eot?gvfum5');
+            src: url('../fonts/icomoon.eot?gvfum5#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?gvfum5') format('truetype'), url('../fonts/icomoon.woff?gvfum5') format('woff'), url('../fonts/icomoon.svg?gvfum5#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="center">
+        <!-- <img src="image/1.png"> -->
+        <div class="login2">
+            <a href="javascript:;" id="zhuce" class="color">注册</a>
+            <a href="javascript:;" id="denglu">登录</a>
+
+        </div>
+    </header>
+    <ul class="login1">
+        <li class="regi">
+            <form action="/zhuce" method="post" id="userForm">
+                <main class="center">
+                    <h1>用户注册</h1>
+                    <div class="name"><i class="glyphicon glyphicon-user"></i><input type="text" placeholder="支持英文与数字，注册后不能修改" name="name"><span class="glyphicon glyphicon-triangle-left hege"></span></div>
+                    <div class="password"><i class="glyphicon glyphicon-lock"></i><input type="password" placeholder="8-20位字符，数字或特殊符号" name='password'><span class="glyphicon glyphicon-triangle-left hege"></span></div>
+
+                    <div class="check1"><input type="checkbox">我同意问卷<a>《用户服务协议》</a></div>
+                    <button>创建用户</button>
+                    <a class="go" style="cursor: pointer; ">已有账号，去登录</a>
+
+                </main>
+            </form>
+        </li>
+        <li style="display: none;" class="login">
+            <form action="/login1" method="post" id="loginForm">
+                <main class="center">
+                    <h1>用户登录</h1>
+                    <div class="name"><i class="glyphicon glyphicon-user"></i><input type="text" placeholder="用户名" name="name" id="userName"><span class="glyphicon glyphicon-triangle-left hege "></span></div>
+                    <div class="password"><i class="glyphicon glyphicon-lock"></i><input type="password" placeholder="请登录用户密码" name="password" id="userPassword"><span class=" glyphicon glyphicon-triangle-left hege "></span></div>
+                    <div class="check1"><input type="checkbox">下次自动登录</div>
+                    <button type="button" class="denglu"> 登录</button>
+                    <a class="back " style="cursor: pointer; ">立即注册</a>
+
+                </main>
+            </form>
+        </li>
+    </ul>
+    <div class="bear ">
+    </div>
+    <script src="js/login.js "></script>
+    <!-- <script type="text/html" id="top">
+    
+    </script> -->
+    <script type="text/javascript ">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<script src="/login/status"></script>
+<script>
+    if (!isLogin) location.href = 'login.html';
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/res.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/offline-exporting.js"></script>
+</head>
+
+<body>
+    <button type="button" id="tui">退出</button>
+    <header>物联网问卷调查图表</header>
+    <main>
+        <div id="container" style="width: 880px; height: 550px; margin: 0 auto"></div>
+    </main>
+    <script language="JavaScript">
+        $(document).ready(function () {
+
+
+
+            $.ajax({
+                type: 'get',
+                url: '/res1',
+                success: function (res) {
+                    console.log(res);
+                    var data = []
+                    res.forEach((e) => {
+                        data.push(e.is)
+                    })
+                    var a = 0;
+                    var b = 0;
+                    var c = 0;
+                    data.forEach((e) => {
+                        if (e == 0) {
+                            a++
+                        } else if (e == 1) {
+                            b++
+                        } else {
+                            c++
+                        }
+                    })
+
+
+
+                    var chart = {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false
+                    };
+                    var title = {
+                        text: '调查学生了解比例'
+                    };
+                    var tooltip = {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    };
+                    var plotOptions = {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+                                style: {
+                                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                }
+                            }
+                        }
+                    };
+                    var series = [{
+                        type: 'pie',
+                        name: 'Browser share',
+                        data: [
+                            {
+                                name: '有，并深入了解过',
+                                y: (a / data.length),
+                                sliced: true,
+                                selected: true
+                            },
+                            ['接触过一点', (b / data.length)],
+                            ['没有', (c / data.length)]
+                        ]
+                    }];
+                    var exporting = {
+                        chartOptions: { // specific options for the exported image
+                            plotOptions: {
+                                series: {
+                                    dataLabels: {
+                                        enabled: true
+                                    }
+                                }
+                            }
+                        },
+                        fallbackToExportServer: false
+                    };
+                    var credits = {
+                        enabled: false
+                    };
+
+                    var json = {};
+                    json.chart = chart;
+                    json.title = title;
+                    json.tooltip = tooltip;
+                    json.series = series;
+                    json.plotOptions = plotOptions;
+                    json.exporting = exporting;
+                    json.credits = credits;
+                    $('#container').highcharts(json);
+                }
+
+            })
+
+
+
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

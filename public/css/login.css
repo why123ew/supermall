@@ -1,0 +1,226 @@
+body * {
+    box-sizing: border-box;
+}
+
+a:hover {
+    text-decoration: none!important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: url('../image/3.jpg') no-repeat;
+    background-size: 100%;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    width: 1106px;
+    height: 96px;
+}
+
+header img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 150px;
+    height: 59px;
+}
+
+header div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    height: 40px;
+}
+
+header div a {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 24px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header div a:first-child {
+    width: 90px;
+    height: 100%;
+}
+
+header div a:last-child {
+    width: 90px;
+    height: 100%;
+    margin: 0 0 0 20px;
+}
+
+.bear {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    background: url(../image/2.png);
+    animation: bear 1s steps(8) infinite, move 3s forwards;
+    margin-bottom: 0;
+}
+
+@keyframes bear {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1600px 0;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+main {
+    width: 500px;
+    height: 420px;
+    background-color: #fff;
+    padding: 0 50px;
+    border-radius: 20px;
+}
+
+main>a {
+    display: block;
+    width: 400px;
+}
+
+main h1 {
+    width: 400px;
+    height: 104px;
+    color: #FA9111;
+    font-size: 24px;
+    padding: 40px 0;
+}
+
+main div i {
+    position: absolute;
+    top: 12px!important;
+    left: 15px;
+    line-height: 46px;
+    font-weight: normal;
+    font-size: 20px;
+    opacity: .5;
+}
+
+main>div {
+    position: relative;
+    width: 400px;
+    height: 46px;
+    border: 1px solid gray;
+    border-radius: 23px;
+    margin-top: 23px;
+}
+
+main .password input,
+main .name input {
+    position: absolute;
+    left: 40px;
+    height: 100%;
+    border: 0;
+    outline: none;
+    width: 340px;
+}
+
+main input::-webkit-input-placeholder {
+    color: #aaaaaa;
+}
+
+main .check1 {
+    width: 284px;
+    height: 19px;
+    font-size: 12px;
+    color: #262626;
+    border: 0;
+    line-height: 19px;
+}
+
+main .check1 input {
+    width: 14px;
+    height: 14px;
+    margin-right: 7px;
+}
+
+main .check1 a {
+    color: skyblue;
+}
+
+main>a {
+    display: block;
+    width: 400px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    margin: 27px 0;
+    font-size: 18px;
+    color: #FA911E;
+    margin: -13px 0;
+}
+
+main>button {
+    width: 400px;
+    height: 46px;
+    margin: 20px 0;
+    border: 0;
+    /* background-color: #FA911E; */
+    border-radius: 23px;
+    outline: none;
+}
+
+.color {
+    background-color: gray;
+}
+
+main .name .hege,
+main .password .hege {
+    display: none;
+    position: absolute;
+    right: -192px;
+    top: 3px;
+    width: 200px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #81c763;
+}
+
+main .name .glyphicon-triangle-left::before,
+main .password .glyphicon-triangle-left::before {
+    position: absolute;
+    right: 195px;
+    top: 6px;
+    color: indianred;
+}
+
+main .name .shibai,
+main .password .shibai {
+    position: absolute;
+    right: -202px;
+    top: 6px;
+    width: 200px;
+    height: 30px;
+    background-color: #3f2f27;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0 30px;
+}

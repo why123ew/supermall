@@ -1,0 +1,102 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F7F8FA;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+#tui {
+    position: absolute;
+    right: 59px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #d4bda5;
+    border: 0;
+    border-radius: 25px;
+    outline: none;
+}
+
+.center {
+    margin: 43px auto;
+}
+
+.center1 {
+    margin: 43px auto;
+    text-align: center;
+}
+
+header {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.main {
+    overflow: hidden;
+    width: 890px;
+    height: 1550px;
+    background: url('../image/6.jpg') no-repeat;
+    background-size: 913px 1500px;
+}
+
+.main .wenjuan {
+    margin: 161px 163px;
+    /* background-color: pink; */
+    width: 800px;
+    height: 100%;
+}
+
+.main h1 {
+    font-size: 26px;
+    margin: 27px 192px;
+    /* text-align: center; */
+}
+
+.wenjuan .xuangao {
+    font-size: 14px;
+    color: #707070;
+    margin: 10px 0px;
+}
+
+.wenjuan .cut {
+    width: 597px;
+    height: 1px;
+    border: 0.5px solid #EAEAEA;
+    margin: 25px 0px 25px;
+}
+
+form>div {
+    font-size: 16px;
+    color: #484848;
+    margin: 12px 0;
+}
+
+form .views {
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 351px;
+    font-size: 10px;
+    outline: none;
+    background-color: #f7f8faf8;
+    /* background-color: ; */
+}
+
+form button {
+    display: block;
+    background-color: #2672ff;
+    width: 95px;
+    height: 37px;
+    color: #ffffff;
+    border: 0;
+    margin: 53px 228px;
+    outline: none;
+    /* text-align: center; */
+}
+
+form input {
+    font-size: 20px;
+    color: #707070;
+}

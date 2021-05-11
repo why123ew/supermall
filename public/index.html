@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template-web.js"></script>
+
+</head>
+
+<body>
+    <button type="button" id="tui">退出</button>
+    <header class="center1"></header>
+    <div class="main center">
+        <div class="wenjuan">
+            <h1>关于物联网的问卷调查</h1>
+            <div class="xuangao">因为专业报告需要，麻烦各位认真填写</div>
+            <div class="cut"></div>
+            <form action="/data" method="post" id="dataForm">
+                <div class="one">
+                    <div>Q1: 你的姓名是：（单选）</div>
+                    <input type="radio" name="sex" value="1">男</br>
+                    <input type="radio" name="sex" value="0">女
+                </div>
+
+                <div class="two">
+                    <div>Q2: 请问您的年龄在下面选项哪个阶段：（单选）</div>
+                    <input type="radio" name="age" value="0">15-20岁 </br>
+                    <input type="radio" name="age" value="1">20-25岁</br>
+                    <input type="radio" name="age" value="2">25-30岁 </br>
+                    <input type="radio" name="age" value="3">30岁以上
+                </div>
+
+
+                <div class="three">
+                    <div>Q3: 您目前的学历层次？（单选）</div>
+                    <input type="radio" name="level" value='0'>高中及以下 </br>
+                    <input type="radio" name="level" value='1'>大专</br>
+                    <input type="radio" name="level" value='2'>本科 </br>
+                    <input type="radio" name="level" value='3'>研究生及以上
+                </div>
+                <div class="fuor">
+                    <div>Q4: 您是否有了解过“物联网呢”？（单选）</div>
+                    <input type="radio" name="is" value="0">有，并了解过 </br>
+                    <input type="radio" name="is" value="1">有，但没有深入了解</br>
+                    <input type="radio" name="is" value="2">没有
+                </div>
+                <div class="five">
+                    <div>Q5: 您是在哪了解到“物联网”的？(多选)</div>
+                    <input type="checkbox" name="where" value="0">网络</br>
+                    <input type="checkbox" name="where" value="1">电视</br>
+                    <input type="checkbox" name="where" value="2">报纸</br>
+                    <input type="checkbox" name="where" value="3">书上</br>
+                    <input type="checkbox" name="where" value="4">听别人说的
+                </div>
+                <div class="six">
+                    <div>Q6: 下列的物联网应用实例(如果可以实现的话)，您认为哪些对您有帮助？（多选）</div>
+                    <input type="checkbox" name="help" value="0">在超市购物付款时，不用排队，不用带钱包，在出口处检查您的手机卡就行了</br>
+                    <input type="checkbox" name="help" value="1">高速路上不用停车缴费，慢速通过即可，识别器检测到您车牌信息自动缴费</br>
+                    <input type="checkbox" name="help" value="2">您可以通过您的手机或电脑监控您家中的家电设备、安防系统</br>
+                    <input type="checkbox" name="help" value="3">下班前，您可以通过物联网技术控制您家中的家电设备开始工作</br>
+                    <input type="checkbox" name="help" value="4">当您准备睡觉时，只需按下睡眠按钮，家中的灯自动关闭
+                </div>
+                <div class="seven">
+                    <div>Q7: 您最希望物联网应用技术用于哪个方面？（单选）</div>
+                    <input type="radio" name="app1" value="0">家居智能 </br>
+                    <input type="radio" name="app1" value="1">道路交通</br>
+                    <input type="radio" name="app1" value="2">帮助弱势群体及儿童</br>
+                    <input type="radio" name="app1" value="3">安防监控
+                </div>
+                <div class="eight">
+                    <div>Q8: 如果前面技术能实现，您觉得物联网的前景如何？（单选）</div>
+                    <input type="radio" name="good" value="0">很好，并能很快占据市场</br>
+                    <input type="radio" name="good" value="1">很好，但对我没什么影响</br>
+                    <input type="radio" name="good" value="2">不看好，技术不成熟 </div>
+                <div class="nine">
+                    <div>Q9: 在您的认知中，你觉得物联网如何？（二十字以内）</div>
+                    <input type=" text" name="view" class="views">
+                </div>
+
+                <button type="button" id="sub">提交</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
